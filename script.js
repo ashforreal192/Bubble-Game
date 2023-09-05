@@ -1,5 +1,5 @@
 var timer = 60
-var score = 0
+var score = -10
 var hitrn = 0
 
 
@@ -33,11 +33,10 @@ function runTimer() {
             document.querySelector("#TimerValue").textContent = timer;
         } else {
             clearInterval(timerint)
-            document.querySelector("#pbtm").innerHTML = `<h1>Game has ended</h1>`
+            document.querySelector("#pbtm").innerHTML = `<h1>Game has ended</h1><h2>And you scored ${score}</h2>`
         }
     }, 1000)
 }
-
 
 document.querySelector("#pbtm").addEventListener("click", function (dets) {
     var clickedNum = Number(dets.target.textContent)
