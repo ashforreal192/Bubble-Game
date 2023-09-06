@@ -3,7 +3,6 @@ var score = -10
 var hitrn = 0
 
 
-
 function increaseScore() {
     score += 10
     document.querySelector("#scoreValue").textContent = score
@@ -15,7 +14,6 @@ function getNewHit() {
     document.querySelector("#hitValue").textContent = hitrn
 }
 
-
 function makeBubble() {
     var clutter = ""
     for (let i = 1; i <= 160; i++) {
@@ -26,6 +24,7 @@ function makeBubble() {
 }
 
 
+
 function runTimer() {
     var timerint = setInterval(function () {
         if (timer > 0) {
@@ -33,10 +32,11 @@ function runTimer() {
             document.querySelector("#TimerValue").textContent = timer;
         } else {
             clearInterval(timerint)
-            document.querySelector("#pbtm").innerHTML = `<h1>Game has ended</h1><h2>And you scored ${score}</h2>`
+            document.querySelector("#pbtm").innerHTML = `<h1>Game has ended</h1><h2>And you scored "${score}"</h2>`
         }
     }, 1000)
 }
+
 
 document.querySelector("#pbtm").addEventListener("click", function (dets) {
     var clickedNum = Number(dets.target.textContent)
@@ -46,6 +46,7 @@ document.querySelector("#pbtm").addEventListener("click", function (dets) {
         getNewHit()
     }
 })
+
 
 runTimer()
 makeBubble()
