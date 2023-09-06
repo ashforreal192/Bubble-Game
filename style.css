@@ -65,8 +65,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 15px;
     width: 100%;
     height: calc(100% - 100px);
     background-color: #8d99ae;
@@ -80,6 +80,7 @@ body {
 #pbtm h2{
     text-transform: uppercase;
     font-size: 3.5em;
+    color: #a2d2ff;
 }
 
 .bubble {
@@ -87,7 +88,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 2.5vw;
-    height: 3.3vh;
+    height: 3vh;
     background-color: #ece4db;
     border-radius: 50%;
     font-weight: bold;
@@ -96,4 +97,88 @@ body {
 .bubble:hover {
     background-color: #006d77;
     cursor: pointer;
+}
+
+
+@media(max-width:600px){
+    #panel {
+        overflow: hidden;
+        height: 80%;
+        width: 70%;
+        background-color: #25a244;
+        border-radius: 10px;
+    }
+
+    #ptop {
+        padding: 0 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /* flex-direction: column; */
+        width: 100%;
+        height: 10%;
+        background-color: #4a4e69;
+        gap: 20px;
+    }
+
+    #elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+
+    #elem h2 {
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.box {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 5px 8px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#pbtm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 90%;
+    background-color: #8d99ae;
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 3vh;
+    background-color: #ece4db;
+    border-radius: 30%;
+    font-weight: bold;
+}
+
+#pbtm h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+#pbtm h2{
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #a2d2ff;
+    text-align: center;
+    font-weight: 500;
+}
+
 }
