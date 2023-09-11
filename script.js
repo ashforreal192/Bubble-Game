@@ -1,5 +1,5 @@
 var timer = 60
-var score = -10
+var score = 0
 var hitrn = 0
 
 
@@ -47,8 +47,9 @@ document.querySelector("#pbtm").addEventListener("click", function (dets) {
     }
 })
 
-
+document.querySelector("#btn").addEventListener("click", function() {
 runTimer()
 makeBubble()
+}
+)
 getNewHit()
-increaseScore()
